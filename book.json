@@ -1,0 +1,15 @@
+{
+    "plugins": [
+        "disqus",
+        "richquotes"
+    ],
+    "pluginsConfig": {
+        "disqus": {
+            "shortName": "exploringdevisegitbook"
+        },
+        "richquotes": {
+            "todos": true
+        }
+    }
+}
+

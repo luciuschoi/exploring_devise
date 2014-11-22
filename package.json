@@ -1,0 +1,16 @@
+{
+    "name": "exploring_devise",
+    "version": "0.0.1",
+    "description": "Devise 젬 파헤치기",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/luciuschoi/exploring_devise.git"
+
+    },
+    "author": "LuciusChoi <lucius.choi@gmail.com>",
+    "dependencies": {
+      "gitbook-plugin-autocover": "0.0.5",
+      "gitbook-plugin-disqus": "0.0.1",
+      "gitbook-plugin-richquotes": "0.0.3"
+    }
+}
