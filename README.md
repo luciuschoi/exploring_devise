@@ -1,7 +1,5 @@
 # Devise 젬 파헤치기 (v1.0.3)
 
-[![Build Status](https://www.gitbook.io/button/status/book/luciuschoi/exploring_devise)](https://www.gitbook.io/book/luciuschoi/exploring_devise/activity)
-
 ---
 
 ![](https://camo.githubusercontent.com/b1c21cc10f2f94857dea5135fe55f2e4d451e028/68747470733a2f2f7261772e6769746875622e636f6d2f706c617461666f726d617465632f6465766973652f6d61737465722f6465766973652e706e67)
