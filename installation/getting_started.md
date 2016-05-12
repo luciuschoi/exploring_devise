@@ -132,7 +132,9 @@ $ git commit -m "최초 커밋"
 $ rails new auth_blog -d [mysql|postgresql]
 ```
 
-> **Info** 최근 `MariaDB`를 사용하는 예도 많아지고 있다. 이 때는 시스템에 `MariaDB`를 설치하기만 하면 된다. 즉, 레일스 프로젝트 생성시에 `-d mysql` 옵션을 사용하면 된다. 나머지는 `MySQL`과 동일하게 작업하면 된다.
+> #### Note::노트
+> 
+> 최근 `MariaDB`를 사용하는 예도 많아지고 있다. 이 때는 시스템에 `MariaDB`를 설치하기만 하면 된다. 즉, 레일스 프로젝트 생성시에 `-d mysql` 옵션을 사용하면 된다. 나머지는 `MySQL`과 동일하게 작업하면 된다.
 
 간혹 데이터베이스별 `database.yml` 파일이 별도로 필요한 경우가 있기 때문에 아래와 `SQLite3` / `MySQL` / `PostgreSQL` 각각에 대한 `database.yml` 파일을 기록해 둔다.
 
