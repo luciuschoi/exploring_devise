@@ -6,6 +6,9 @@
     "pluginsConfig": {
         "disqus": {
             "shortName": "exploringdevisegitbook"
+        },
+        "callouts": {
+            "showTypeInHeader": false
         }
     }
 }
