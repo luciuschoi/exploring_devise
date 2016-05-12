@@ -1,15 +1,11 @@
 {
     "plugins": [
         "disqus",
-        "richquotes",
         "callouts"
     ],
     "pluginsConfig": {
         "disqus": {
             "shortName": "exploringdevisegitbook"
-        },
-        "richquotes": {
-            "todos": true
         }
     }
 }
