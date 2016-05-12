@@ -2,8 +2,7 @@
     "plugins": [
         "disqus",
         "callouts",
-        "code-highlighter",
-        "comment"
+        "code-highlighter"
     ],
     "pluginsConfig": {
         "disqus": {
