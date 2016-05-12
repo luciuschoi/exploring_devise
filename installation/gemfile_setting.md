@@ -22,11 +22,15 @@ gem 'letter_opener', group: :development
 $ bundle install
 ```
 
-> **Warning** 레일스의 최근 버전에서 새로운 프로젝트를 생성하면 `sass-rails` 젬이 디폴트로 추가되어 있지만, 혹시 누락되었다면 함께 추가해 주어야 `SASS` 형식으로 `CSS`를 사용할 수 있게 된다.
+> #### Caution::주의 
+> 
+> 레일스의 최근 버전에서 새로운 프로젝트를 생성하면 `sass-rails` 젬이 디폴트로 추가되어 있지만, 혹시 누락되었다면 함께 추가해 주어야 `SASS` 형식으로 `CSS`를 사용할 수 있게 된다.
 
 잠시, [`letter_opener`](https://github.com/ryanb/letter_opener) 젬의 유용성을 간단하게 설명하고 넘어가자. `Devise`젬을 이용하여 회원등록후 인증과정을 구현할 때 최근에는 사용자 등록시 사용한 이메일 주소로 이메일을 발송하여 본인 여부를 확인하는 로직을 많이 사용한다. 그러나 개발 환경에서는 실제로 이메일을 발송하는 것을 자원의 낭비일 뿐아니라 때로는 원치않는 사람에게 이메일 발송되는 사태가지 발생할 수 있다. 이 때 `letter_opener` 젬을 이용하면 이러한 문제점을 해결할 수 있고 별도의 이메일 발송을 위한 환경을 설정하지 않아도 된다. `letter_opener` 젬의 셋업을 [`여기`](https://github.com/ryanb/letter_opener)를 참고하면 된다.
 
-> **Note** 이 책의 샘플 프로젝트는 레일스 4를 기준으로 작성할 것이지만 레일스 3.2.x 버전에서 `Bootstrap-sass`를 사용해야 할 경우는 [`여기`](https://github.com/twbs/bootstrap-sass#rails-32x)를 참고하기 바란다.
+> #### Note::노트
+> 
+> 이 책의 샘플 프로젝트는 레일스 4를 기준으로 작성할 것이지만 레일스 3.2.x 버전에서 `Bootstrap-sass`를 사용해야 할 경우는 [`여기`](https://github.com/twbs/bootstrap-sass#rails-32x)를 참고하기 바란다.
 
 ## 'bootstrap-sass' 젬의 셋업 및 사용법
 
@@ -124,7 +128,9 @@ $ cp $(bundle show bootstrap-sass)/vendor/assets/stylesheets/bootstrap.scss app/
 @import "bootstrap/responsive-utilities";
 ```
 
-> **Info** 전통적인 CSS에서는 중첩태그나 믹신 또는 변수를 사용할 수 없으나 이와 같은 것을 보강한 CSS의 확장된 버전을 `Sass`라고 한다. `Sass`는 두가지 형태의 파일포맷을 가지는데, `.sass` 확장자를 가지는 파일은 위의 기능에다가 `{ }`을 스페이스 들여쓰기로 대신한 원조 `Sass` 형태이고, 이에 반하여 `.scss` 확장자를 가지는 파일(`Sassy CSS`)은 이러한 추가기능이 없는 변형된 `Sass` 형태이다. 일반적으로 레일스에서는 `.css.scss` 확장자를 가지는 `Sassy CSS` 파일형태를 주로 사용한다.
+> #### Note::노트
+> 
+> 전통적인 CSS에서는 중첩태그나 믹신 또는 변수를 사용할 수 없으나 이와 같은 것을 보강한 CSS의 확장된 버전을 `Sass`라고 한다. `Sass`는 두가지 형태의 파일포맷을 가지는데, `.sass` 확장자를 가지는 파일은 위의 기능에다가 `{ }`을 스페이스 들여쓰기로 대신한 원조 `Sass` 형태이고, 이에 반하여 `.scss` 확장자를 가지는 파일(`Sassy CSS`)은 이러한 추가기능이 없는 변형된 `Sass` 형태이다. 일반적으로 레일스에서는 `.css.scss` 확장자를 가지는 `Sassy CSS` 파일형태를 주로 사용한다.
 
 ### 자바스크립트 셋업
 
@@ -168,7 +174,9 @@ $ rails g simple_form:install --bootstrap
 =================================================================
 ```
 
-> **Caution** 이 예에서와 같이 `bootstrap-sass`를 사용할 경우에는 `--bootstrap` 옵션을 추가해 주는 것을 잊지 말아야 한다.
+> #### Caution::주의
+> 
+> 이 예에서와 같이 `bootstrap-sass`를 사용할 경우에는 `--bootstrap` 옵션을 추가해 주는 것을 잊지 말아야 한다.
 
 간혹 simple_form:install 제너레이터로 생성한 것을 삭제하고 싶은 경우가 있는데, 이때는 아래와 같이 `destroy` 명령(줄여서 `d`)을 사용하면 된다
 
