@@ -17,7 +17,9 @@
 
 [`여기`](https://github.com/plataformatec/devise)를 클릭하면`Devise` 젬의 `Github` 저장소로 이동할 수 있다.
 
-> **Info** 이 책에서는 독자들의 이해를 보다 효과적으로 돕기 위해  간단한 샘플 프로젝트를 작성할 것이다. [`여기`](https://github.com/luciuschoi/sample_project_for_devise)를 클릭하면 샘플 프로젝트 저장소로 이동할 수 있다.
+> #### Note::노트
+> 
+> 이 책에서는 독자들의 이해를 보다 효과적으로 돕기 위해  간단한 샘플 프로젝트를 작성할 것이다. [`여기`](https://github.com/luciuschoi/sample_project_for_devise)를 클릭하면 샘플 프로젝트 저장소로 이동할 수 있다.
 
 ### *이 책을 읽는 대상*
 
