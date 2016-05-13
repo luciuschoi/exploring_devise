@@ -77,7 +77,9 @@ Rails.application.routes.draw do
 end
 ```
 
-> **Caution** 주의할 것은 `welcome/index`가 아니라 `welcome#index`와 같이 중간에 해시 기호(`#`)를 사용해야 한다.
+> #### Caution::주의
+> 
+> 주의할 것은 `welcome/index`가 아니라 `welcome#index`와 같이 중간에 해시 기호(`#`)를 사용해야 한다.
 
 이제 터미널 커맨드라인 쉘에서 아래와 같이 로컬 웹서버를 구동하고
 ```bash
@@ -93,7 +95,9 @@ $ open http://localhost:3000
 
 `http://localhost:3000`로 접속하면 처음에 보이던 `Welcome aboard` 페이지 대신에 `welcome` 컨트롤러의 `index` 액션의 뷰 템플릿 페이지가 보이게 된다.
 
-> **Caution** 젬을 새로추가하거나 어플리케이션의 설정 파일을 수정한 경우에는 반드시 서버를 재실행해야 제대로 반영된다.
+> #### Caution::주의
+> 
+> 젬을 새로추가하거나 어플리케이션의 설정 파일을 수정한 경우에는 반드시 서버를 재실행해야 제대로 반영된다.
 
 [루트를 지정하지 않은 상태의 웹페이지 화면]
 ![](http://i1373.photobucket.com/albums/ag392/rorlab/Photobucket%20Desktop%20-%20RORLAB/auth_blog/2014-05-28_11-08-51_zpsc7fdf050.png)
