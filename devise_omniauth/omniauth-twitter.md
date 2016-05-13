@@ -1,10 +1,12 @@
 # 기타 SNS 인증서비스로 로그인하기
 
-> **Warning** 이 장에서는 구현하는 내용은 [`Facebook으로 로그인하기`](/devise_omniauth/omniauth-facebook.html)에서 작업한 내용을 포함하지 않는다는 것을 유의하기 바란다.
+> #### Caution::주의
+> 
+> 이 장에서는 구현하는 내용은 [`Facebook으로 로그인하기`](/devise_omniauth/omniauth-facebook.html)에서 작업한 내용을 포함하지 않는다는 것을 유의하기 바란다.
 
 이전에 설명한 `Facebook` SNS 인증서비스만를 사용할 경우와는 달리 여러개의 인증서비스를 동시에 사용할 수 있도록 하는 것은 조금 복잡하다.
 
-다행해도 ["Kam Low"](https://plus.google.com/+KamLow)가 작성한  [`rails 4 omniauth using devise with twitter, facebook and linkedin`](http://sourcey.com/rails-4-omniauth-using-devise-with-twitter-facebook-and-linkedin/)라는 훌륭한 글을 검색할 수 있어서 많은 부분을 참고하였으며 약간의 코드 수정을 통해서 구현한 내용을 설명과 곁들여 정리하였다.
+다행히도 ["Kam Low"](https://plus.google.com/+KamLow)가 작성한  [`rails 4 omniauth using devise with twitter, facebook and linkedin`](http://sourcey.com/rails-4-omniauth-using-devise-with-twitter-facebook-and-linkedin/)라는 훌륭한 글을 검색할 수 있어서 많은 부분을 참고하였으며 약간의 코드 수정을 통해서 구현한 내용을 설명과 곁들여 정리하였다.
 
 <hr>
 
@@ -12,7 +14,9 @@
 
 이 장에서는 `Facebook` 뿐만 아니라, `Twitter`, `Linkedin`, 최근에 오픈된 `Kakao` 인증서비스를 이용하여 로그인하는 과정을 설명한다.
 
-> **Info** `Kakao` 인증서비스를 루비에서 사용하기 위해서는 `omniauth-kakao` OAuth API 젬을 사용해야 하는데, 이 젬은  [`강성희(@shaynekang)`](https://twitter.com/shaynekang)님이 작성하여  [Rubygems.org](https://rubygems.org/gems/omniauth-kakao)에 공개하였다.
+> #### Note::노트
+> 
+> `Kakao` 인증서비스를 루비에서 사용하기 위해서는 `omniauth-kakao` OAuth API 젬을 사용해야 하는데, 이 젬은  [`강성희(@shaynekang)`](https://twitter.com/shaynekang)님이 작성하여  [Rubygems.org](https://rubygems.org/gems/omniauth-kakao)에 공개하였다.
 
 
 이제 본격적으로 구현해 보기로 하자.
@@ -44,7 +48,9 @@ $ rails g migration add_name_to_users name && rake db:migrate
 $ rails g model Identity user:references provider uid
 ```
 
-> **Note** 레일스 레너레이터를 이용하여 모델을 만들 때 해당 속성이 문자열일 경우 데이터형을 생략할 수 있는데, `provider:string`은 데이터형 지정없이 `provider`만으로 파라미터를 지정해도 된다.
+> #### Note::노트
+> 
+> 레일스 레너레이터를 이용하여 모델을 만들 때 해당 속성이 문자열일 경우 데이터형을 생략할 수 있는데, `provider:string`은 데이터형 지정없이 `provider`만으로 파라미터를 지정해도 된다.
 
 그리고 [`Facebook으로 로그인하기`](/devise_omniauth/omniauth_facebook.html)에서와 같이 `User` 모델 클래스 파일을 열어 `:confirmable` 옵션을 `devise` 매크로형 메소드에 추가해 준다. 이 옵션은 사용자 등록시 인증메일을 보낼 수 있게 해 준다.
 
