@@ -131,11 +131,11 @@ end
 
 [모델 클래스에 대한 권한 메소드의 실행 순서]
 
-![](http://i1373.photobucket.com/albums/ag392/rorlab/Photobucket%20Desktop%20-%20RORLAB/exploring_devise/authority_flow001_zpscb053b1b.png)
+![](/assets/authority_flow001_zpscb053b1b.png)
 
 [모델 객체 인스턴스에 대한 권한 메소드의 실행 순서]
 
-![](http://i1373.photobucket.com/albums/ag392/rorlab/Photobucket%20Desktop%20-%20RORLAB/exploring_devise/authority_flow002_zpsc378bbbd.png)
+![](/assets/authority_flow002_zpsc378bbbd.png)
 
 가장 최상위의 권한은 `ApplicationAuthorizer` 클래스에서 정의한다. 이 클래스 파일(`app/authorizers/application_authorizer.rb`)을 열고 우선은 `rolify`의 기능을 사용하지 않은 채, 아래와 같이 작성한다.
 
@@ -198,13 +198,13 @@ end
 
 이제 대략적인 권한설정을 완료했으므로 서버를 다시 시작한 후 브라우저 상단의 메뉴 항목 중에 `Posts`를 클릭해 보자.
 
-![](http://i1373.photobucket.com/albums/ag392/rorlab/Photobucket%20Desktop%20-%20RORLAB/exploring_devise/2014-05-30_12-15-54_zps5fd0961d.png)
+![](/assets/2014-05-30_12-15-54_zps5fd0961d.png)
 
 보는 바와 같이 현재 로그인하 사용자가 작성하지 않은 2번으로 표시된 글의 경우에는 `Actions` 패널에 `edit`와 `destroy` 아이콘 링크가 보이지 않게 된다.
 
 실제로 2번 글의 `Actions` 패널에 있는 아이콘 링크를 클릭한 후 하단에 보이는 `Edit` 버튼을 클릭하여 아래와 같이 경고 메시지(1번)가 표시된다.
 
-![](http://i1373.photobucket.com/albums/ag392/rorlab/Photobucket%20Desktop%20-%20RORLAB/exploring_devise/2014-05-30_12-21-50_zpse5bc2ff8.png)
+![](/assets/2014-05-30_12-21-50_zpse5bc2ff8.png)
 
 
 ## Role의 지정
@@ -285,7 +285,7 @@ after_create :set_default_role, if: Proc.new { User.count > 1 }
 
 그리고 웹브라우저에서 관리자 이메일로 로그인해 보자.
 
-![](http://i1373.photobucket.com/albums/ag392/rorlab/Photobucket%20Desktop%20-%20RORLAB/exploring_devise/2014-05-30_13-47-29_zps6fb2bc6b.png)
+![](/assets/2014-05-30_13-47-29_zps6fb2bc6b.png)
 
 1번에서 `Admin` 권한 하나만 표시된 것을 확인해 볼 수 있다.
 
@@ -323,7 +323,7 @@ end
 
 이와 같이 `Authority` 젬을 사용할 때 권한 로직 구현의 방식은 크게 세가지로 구분한다.
 
-![](http://i1373.photobucket.com/albums/ag392/rorlab/Photobucket%20Desktop%20-%20RORLAB/exploring_devise/authority_strategy_zpsa6415ee4.png)
+![](/assets/authority_strategy_zpsa6415ee4.png)
 
 1. 단순형 : 가장 단순한 방식으로 모든 권한 로직은 `ApplicationAuthorize` 클래스에 구현한다.
 2. 공유형 : 하나의 `Authorize` 클래스를 여러 모델이 공유하는 로직이다.
