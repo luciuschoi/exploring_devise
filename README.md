@@ -11,7 +11,7 @@
 
 실제, [루비툴박스](https://www.ruby-toolbox.com/categories/rails_authentication) 서비스를 검색해 보아도 직관적으로 알 수 있다.
 
-![](http://i1373.photobucket.com/albums/ag392/rorlab/Photobucket%20Desktop%20-%20RORLAB/exploring_devise/2014-05-25_21-49-56_zps4843eb84.png)
+![](images/2014-05-25_21-49-56_zps4843eb84.PNG)
 
 `Devise` 젬은 레일스 초보자들에게는 사용하기가 다소 까다로와 제대로 동작하도록 코딩하기가 쉽지만은 않다. 그래서 이 책에서는 `Devise` 젬을 좀 더 깊이 있게 알아 봄으로써 회원 인증을 보다 쉽게 구현할 수 있도록 할 것이다.
 
