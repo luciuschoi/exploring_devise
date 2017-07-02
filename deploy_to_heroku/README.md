@@ -22,8 +22,7 @@ gem 'sqlite3', group: :development
 ## 허로쿠 웹사이트에 앱 추가하기
 
 [허로쿠 웹사이트](https://www.heroku.com)를 방문하여 새로운 앱을 추가한다.
-
-![](http://i1373.photobucket.com/albums/ag392/rorlab/Photobucket%20Desktop%20-%20RORLAB/2014-05-30_18-04-19_01_zpsf525268a.png)
+![](/assets/2014-05-30_18-04-19_01_zpsf525268a.PNG)
 
 1번으로 표시된 곳의 `Create a new app` 링크를 클릭하여 새로운 앱을 생성하면 허로쿠 git 저장소의 주소를 알 수 있다.
 
