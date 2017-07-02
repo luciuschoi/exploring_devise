@@ -100,10 +100,10 @@ $ open http://localhost:3000
 > 젬을 새로추가하거나 어플리케이션의 설정 파일을 수정한 경우에는 반드시 서버를 재실행해야 제대로 반영된다.
 
 [루트를 지정하지 않은 상태의 웹페이지 화면]
-![](http://i1373.photobucket.com/albums/ag392/rorlab/Photobucket%20Desktop%20-%20RORLAB/auth_blog/2014-05-28_11-08-51_zpsc7fdf050.png)
+![](/assets/2014-05-28_11-08-51_zpsc7fdf050.png)
 
 [루트를 지정한 후의 웹페이지 화면]
-![](http://i1373.photobucket.com/albums/ag392/rorlab/Photobucket%20Desktop%20-%20RORLAB/auth_blog/2014-05-28_11-11-55_zpsc9073f5d.png)
+![](/assets/2014-05-28_11-11-55_zpsc9073f5d.png)
 
 실제 브라우저에서 보이는 내용은 위의 화면과는 다소 차이가 있다. `body` 태그 영역에 표시되는 내용의 상단에 `60px` 정도의 공백이 보이게 된다. 이것은 나중에 `Bootstrap`의 `navbar` 클래스를 `div` 태그에  적용하여 메뉴를 추가할 때를 고려하여 미리 공간을 확보해 놓은 것이다.
 
@@ -171,7 +171,8 @@ end
 
 아래와 같이 터미널의 커맨드라인 쉘에서 명령을 수행하면 `devise` 컨트롤러를 위한 라우팅 테이블을 확인(`$ rake routes`)할 수 있다
 
-![](http://i1373.photobucket.com/albums/ag392/rorlab/Photobucket%20Desktop%20-%20RORLAB/auth_blog/2014-05-28_11-59-07_zpsb791e7c5.png)
+![](/assets/2014-05-28_11-59-07_zpsb791e7c5.png)
+
 
 초록색으로 표시된 부분이 `devise` 컨트롤러에 대한 라우팅에 해당한다. 이 라우팅 테이블에 대한 자세한 설명은 생략하기로 한다. 자세한 내용을 원할 경우 [`여기`](http://guides.rubyonrails.org/routing.html#listing-existing-routes)를 참고하기 바란다.
 
@@ -226,15 +227,15 @@ $ rails g devise:views
 
 웹서버를 다시 구동하여 어플리케이션을 다시 실행한 후 브라우저에서 확인해 보자.
 
-![](http://i1373.photobucket.com/albums/ag392/rorlab/Photobucket%20Desktop%20-%20RORLAB/auth_blog/2014-05-28_12-15-04_zpsf9c2c8a2.png)
+![](/assets/2014-05-28_12-15-04_zpsf9c2c8a2.png)
 
 실제로 이메일을 입력하고 비밀번호를 입력한 후 `Sign up` 버튼을 클릭하면 아래와 같은 이메일 화면이 또 다른 브라우저에 표시된다.
 
-![](http://i1373.photobucket.com/albums/ag392/rorlab/Photobucket%20Desktop%20-%20RORLAB/exploring_devise/2014-06-03_18-56-24_zps34a8ad23.png)
+![](/assets/2014-06-03_18-56-24_zps34a8ad23.png)
 
 하단의 `Confirm my account` 링크를 클릭하면 회원등록 절차가  완료되고 아래와 같은 화면이 보이게 된다.
 
-![](http://i1373.photobucket.com/albums/ag392/rorlab/Photobucket%20Desktop%20-%20RORLAB/auth_blog/2014-05-28_12-29-10_zpsf3cdc62c.png)
+![](/assets/2014-05-28_12-29-10_zpsf3cdc62c.png)
 
 위의 화면에서 1번이 표시된 부분을 보면 현재 루트로 이동한 것을 확인할 수 있고, 2번으로 표시된 메시지는 `flash` 메시지가 표시된 것이다. 이것은 디폴트 동작으로 이루어진 것이다.
 
@@ -242,7 +243,7 @@ $ rails g devise:views
 
 이제 회원등록이 완료되고 로그인이 된 상태이다. 그러면 로그아웃을 해 보자. 이를 위해서 브라우저에서 아래와 같이 접속해 보자.
 
-![](http://i1373.photobucket.com/albums/ag392/rorlab/Photobucket%20Desktop%20-%20RORLAB/auth_blog/2014-05-28_12-42-17_zps9ae22a88.png)
+![](/assets/2014-05-28_12-42-17_zps9ae22a88.png)
 
 3번에서 보는 바와 같이 라우팅 테이블에는 `/users/sign_out`이 명시되어 있지만, 2번과 같이 `No route matches`와 같은 라우팅 에러가 발생한다. 브라우저에서 요청을 하게 되면 디폴트로 `GET` 메소드 요청이 되기 때문에 실제로 라우팅에서는 `delete` 메소드로 요청이 들어올 때의 `URI`만 인식하게 되는 것이다. 따라서 당연히 에러가 발생하게 되는 것이다.
 
@@ -261,15 +262,15 @@ $ rails g devise:views
 
 이제, 로그인 상태에 따라 아래와 같이 화면에 표시될 것이다. 현재는 로그인 상태이므로 "현재 로그인된 유저의 이메일"(1번)을 표시하고 `로그아웃` 링크를 추가해 주었다. 브라우저상에서 `/users/sign_out`로 요청시 에러가 나던 것이 `link_to` 헬퍼메소드에 `:method` 옵션으로 `:delete`를 지정해 줌으로써 정확인 라우팅이 이루어지게 되었다.
 
-![](http://i1373.photobucket.com/albums/ag392/rorlab/Photobucket%20Desktop%20-%20RORLAB/auth_blog/2014-05-28_13-43-42_zps57e6a987.png)
+![](/assets/2014-05-28_13-43-42_zps57e6a987.png)
 
 다음으로, 2번 `로그아웃` 링크를 클릭하여 세션을 해제하도록 하자.
 
-![](http://i1373.photobucket.com/albums/ag392/rorlab/Photobucket%20Desktop%20-%20RORLAB/auth_blog/2014-05-28_13-50-25_zpsbfd69ef1.png)
+![](/assets/2014-05-28_13-50-25_zpsbfd69ef1.png)
 
 확인 창이 나타나고,
 
-![](http://i1373.photobucket.com/albums/ag392/rorlab/Photobucket%20Desktop%20-%20RORLAB/auth_blog/2014-05-28_13-51-26_zps3ba92fe9.png)
+![](/assets/2014-05-28_13-51-26_zps3ba92fe9.png)
 
 로그아웃 상태로 돌아간다.
 
