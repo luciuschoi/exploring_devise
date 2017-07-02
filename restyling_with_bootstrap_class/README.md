@@ -25,7 +25,8 @@
 `simple_form` 젬은 레일스의 폼 헬퍼 메소드를 간단하게 사용할 수 있도록 도와 준다. 위의 소스코드와 같이 레일스의 폼 헬퍼에서는 보지 못하는 폼 핸들러의 `input` 메소드는 속성명을 심볼로 받아 표준 html 폼 태그로 변환해 준다. 자세한 내용은 `simple_form` [`문서`](https://github.com/plataformatec/simple_form)를 참고하기 바란다.
 
 참고로, `<%= f.error_notification %>`는 폼을 서밋했을 때 해당 모델의 유효성 검증 절차가 진행되는데 이 때 검증오류를 표시해 준다.
-![](http://i1373.photobucket.com/albums/ag392/rorlab/Photobucket%20Desktop%20-%20RORLAB/auth_blog/2014-05-29_08-37-03_zpsa5190464.png)
+
+![](/assets/2014-05-29_08-37-03_zpsa5190464.png)
 
 1번은 작성자를 선택하는 폼의 `select` 엘리먼트인데, 사실 이것은 입력 폼에 보여줄 필요는 없는 것이다. 현재 로그인한 사용자의 정보를 알 수 있게 때문에 `create` 액션에서 `current_user`를 이용하여 값을 할당해 주면 된다. 따라서 이 `select` 엘리먼트는 삭제하고 `posts_controller.rb` 파일을 열어 `create` 액선을 아래와 같이 수정한다. 2번 링크는 `app/views/posts/edit.html.erb` 파일에서 수정할 예정이다.
 
@@ -65,7 +66,7 @@ end
 <%= link_to 'Back', posts_path, class: "btn btn-default" %>
 ```
 
-![](http://i1373.photobucket.com/albums/ag392/rorlab/Photobucket%20Desktop%20-%20RORLAB/auth_blog/2014-05-29_09-10-25_zps8e3c1181.png)
+![](/assets/2014-05-29_09-10-25_zps8e3c1181.png)
 
 1번 새글을 작성하는 현재 로그인 사용자의 이메일 주소를 보이게 하고 2번에서는 현재 시각을 표시하도록 했다.
 
@@ -89,7 +90,7 @@ end
 
 [`time_ago_in_words`](http://api.rubyonrails.org/classes/ActionView/Helpers/DateHelper.html#method-i-time_ago_in_words) 헬퍼 메소드는 `Datetime` 시간을 상대시간으로 계산하여 표시해 준다.
 
-![](http://i1373.photobucket.com/albums/ag392/rorlab/Photobucket%20Desktop%20-%20RORLAB/auth_blog/2014-05-29_09-22-20_zpsbd63393d.png)
+![](/assets/2014-05-29_09-22-20_zpsbd63393d.png)
 
 1번은 글을 작성한 사용자의 이메일 주소를 보이게 하고 2번에서는 최초 작성된 시간을 현재 시간 기준으로 표시해 준다.
 
@@ -127,8 +128,7 @@ end
 <%= link_to 'New Post', new_post_path, class: "btn btn-default" %>
 ```
 
-![](http://i1373.photobucket.com/albums/ag392/rorlab/Photobucket%20Desktop%20-%20RORLAB/auth_blog/2014-05-29_09-48-13_zpsedb00786.png)
-
+![](/assets/2014-05-29_09-48-13_zpsedb00786.png)
 
 1번은 글을 작성한 사용자의 id 값(`@post.user_id`)이 없을 때 `n/a`로 표시하도록 했다. 여기서는 루비의 `ternary` 연산자([condition] `?` [true expression] `:` [false expression])를 사용하였다. 2번은 문자열로 보이던 링크 표시를 아이콘으로 표시하도록 했다. 이것에 대한 자세한 설명은 [`여기`](http://getbootstrap.com/components/#glyphicons-how-to-use)를 참고하기 바랍니다.
 
@@ -195,7 +195,7 @@ body { margin-top: 60px; }
 }
 ```
 
-![](http://i1373.photobucket.com/albums/ag392/rorlab/Photobucket%20Desktop%20-%20RORLAB/auth_blog/2014-05-29_10-19-16_zps9cd435cb.png)
+![](/assets/2014-05-29_10-19-16_zps9cd435cb.png)
 
 마지막으로 `index` 뷰에서 글 목록의 나열 순서를 최신글이 위로 오도록 해보자. `app/controllers/post_controller.rb` 파일을 열어 `index` 액션을 아래와 같이 수정하자.
 
@@ -205,7 +205,7 @@ def index
 end
 ```
 
-![](http://i1373.photobucket.com/albums/ag392/rorlab/Photobucket%20Desktop%20-%20RORLAB/auth_blog/2014-05-29_10-34-23_zpse1069426.png)
+![](/assets/2014-05-29_10-34-23_zpse1069426.png)
 
 
 ## Devise 뷰
@@ -236,9 +236,7 @@ end
 <%= render "devise/shared/links" %>
 ```
 
-![](http://i1373.photobucket.com/albums/ag392/rorlab/Photobucket%20Desktop%20-%20RORLAB/auth_blog/2014-05-29_11-46-03_zpsc7cf258e.png)
-
-
+![](/assets/2014-05-29_11-46-03_zpsc7cf258e.png)
 
 
 ### > Sign In
@@ -264,7 +262,7 @@ end
 <%= render "devise/shared/links" %>
 ```
 
-![](http://i1373.photobucket.com/albums/ag392/rorlab/Photobucket%20Desktop%20-%20RORLAB/auth_blog/2014-05-29_11-49-18_zps7546b970.png)
+![](/assets/2014-05-29_11-49-18_zps7546b970.png)
 
 ### Edit Profile
 
@@ -306,7 +304,7 @@ end
 <%= link_to "Back", :back, class: "btn btn-default" %>
 ```
 
-![](http://i1373.photobucket.com/albums/ag392/rorlab/Photobucket%20Desktop%20-%20RORLAB/auth_blog/2014-05-29_11-54-42_zps21a5a5a2.png)
+![](/assets/2014-05-29_11-54-42_zps21a5a5a2.png)
 
 ### > Welcome Page (app/views/welcome/index.html.erb)
 
@@ -326,6 +324,6 @@ end
 </center>
 ```
 
-여기서 사용한 `AuthBlog` 엠블렘 이미지(`auth_blog_emblem_300.png`)는 [`여기`](http://i1373.photobucket.com/albums/ag392/rorlab/Photobucket%20Desktop%20-%20RORLAB/exploring_devise/auth_blog_emblem_300_zps8623092b.png)를 클릭하면 다운로드 받을 수 있다.
+여기서 사용한 `AuthBlog` 엠블렘 이미지(`auth_blog_emblem_300.png`)는 [`여기`](/assets/auth_blog_emblem_300_zps8623092b.png)를 클릭하면 다운로드 받을 수 있다.
 
-![](http://i1373.photobucket.com/albums/ag392/rorlab/Photobucket%20Desktop%20-%20RORLAB/auth_blog/2014-05-29_12-11-28_zpsdacf4564.png)
+![](/assets/2014-05-29_12-11-28_zpsdacf4564.png)
