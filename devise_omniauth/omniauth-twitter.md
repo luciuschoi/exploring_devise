@@ -187,7 +187,7 @@ $ echo "export ENV["KAKAO_CLIENT_ID"]=xxxxxx" >> ~/.bashrc
 
 
 특히, 아래와 같이 트위터 앱 등록시 `Callback URL` 값으로는 `http://127.0.01`을 입력하고 `Webiste`는 실제 운영서버로 연결되는 도메인명을 입력한다.
-![](http://i1373.photobucket.com/albums/ag392/rorlab/Photobucket%20Desktop%20-%20RORLAB/exploring_devise/2014-06-06_11-57-46_zpsae5cf558.png)
+![](/assets/2014-06-06_11-57-46_zpsae5cf558.png)
 
 다음 `config/routes.rb` 파일을 열고 `omniauth_callbacks`에 대한 라우팅을 아래와 같이 지정해 준다.
 
@@ -382,7 +382,7 @@ end
 </div>
 ```
 
-![](http://i1373.photobucket.com/albums/ag392/rorlab/Photobucket%20Desktop%20-%20RORLAB/exploring_devise/2014-06-06_18-49-17_zps296e5a78.png)
+![](/assets/2014-06-06_18-49-17_zps296e5a78.png)
 
 위에서는 사용자로부터 이메일 주소(1번)만을 추가로 입력토록 했지만, 이외에도 여러가지 다양한 정보를 사용자로부터 입력을 강요할 수 있다. 예를 들어 비밀번호 입력을 받아 나중에 로그인할 때 비밀번호를 요구받을 수도 있다. 또한, 현재의 인증 상황을 표시하기 위해서 `app/views/layouts/_navbar.html.erb` 파일을 열고, 상단 로그인 부분의 뷰 상태를 아래와 같이 수정한다.
 
