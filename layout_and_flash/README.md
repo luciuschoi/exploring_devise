@@ -56,13 +56,13 @@
 
 이제, 브라우저 화면을 다시 로드하면 아래와 같이 보이게 된다.
 
-![](http://i1373.photobucket.com/albums/ag392/rorlab/Photobucket%20Desktop%20-%20RORLAB/auth_blog/2014-05-28_15-37-03_zps2001566c.png)
+![](/assets/2014-05-28_15-37-03_zps2001566c.png)
 
 ## flash 메시지 표시하기
 
 지금까지는 `flash` 메시지가 제대로 보이지 않았다. 세가지 작업을 추가하면 아래와 같이 이쁘게 보이게 할 수 있다.
 
-![](http://i1373.photobucket.com/albums/ag392/rorlab/Photobucket%20Desktop%20-%20RORLAB/auth_blog/2014-05-28_15-42-16_zps52949be1.png)
+![](/assets/2014-05-28_15-42-16_zps52949be1.png)
 
 `app/helpers/application_helper.rb` >
 
@@ -107,7 +107,7 @@ end
 
 이제 `로그아웃` 링크를 클릭하면와 같이 `flash` 메시지가 보이게 된다.
 
-![](http://i1373.photobucket.com/albums/ag392/rorlab/Photobucket%20Desktop%20-%20RORLAB/auth_blog/2014-05-28_16-06-20_zpsa1b4765d.png)
+![](/assets/2014-05-28_16-06-20_zpsa1b4765d.png)
 
 다음은 사용자의 로그인 상태를 상단 메뉴바로 옮겨 보자.
 
@@ -136,12 +136,12 @@ end
 
 브라우저에서 변경내용을 확인하면 아래와 같다.
 
-![](http://i1373.photobucket.com/albums/ag392/rorlab/Photobucket%20Desktop%20-%20RORLAB/auth_blog/2014-05-28_19-20-40_zpsed335edb.png)
+![](/assets/2014-05-28_19-20-40_zpsed335edb.png)
 
 `Home`(1번)을 클릭하면 루트로 이동하고  `Posts`(2번)을 클릭하면 게시물을 작성하는 페이지로 이동한다(다음 섹션에서 작성할 예정이며 여기서는 링크만 만들어 두기로 한다). 그리고 오른쪽에는 `Sign in`(3번)과 `Sign out`(4번) 메뉴를 두고 클릭하면 각각 `로그인`, `회원가입`하는 페이지로 이동하도록 했다.
 
 로그인하면 아래와 같이 로그인 메뉴항목(2번)이 변경된다.
 
-![](http://i1373.photobucket.com/albums/ag392/rorlab/Photobucket%20Desktop%20-%20RORLAB/auth_blog/2014-05-28_19-26-55_zps1303c20a.png)
+![](/assets/2014-05-28_19-26-55_zps1303c20a.png)
 
 이제 메뉴바가 어느 정도 정리가 되었으니 다음 섹션으로 넘어 가도록 하자.
