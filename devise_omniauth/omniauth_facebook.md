@@ -40,7 +40,7 @@ config.omniauth :facebook, "APP_ID", "APP_SECRET"
 이 때 필요한 `APP_ID`와 `APP_SECRET` 값을 얻기 위해서
 https://developers.facebook.com 로 접속하여 상단 메뉴 중 좌측에 잇는 `App` 항목을 클릭하면 새로운 어플리케이션을 어렵지 않게 생성할 수 있다.
 
-![](http://i1373.photobucket.com/albums/ag392/rorlab/Photobucket%20Desktop%20-%20RORLAB/exploring_devise/2014-06-01_14-28-13_zps8f430dc6.png)
+![](/assets/2014-06-01_14-28-13_zps8f430dc6.png)
 
 1번과 2번 값을 직접 사용하면 보안상의 문제가 될 수 있다. 이 문제를 간단하게 해결하기 위해서 로컬 터미널 운영 시스템의 환경변수를 이용하도록 하자.
 
@@ -75,7 +75,7 @@ FB_APP_SECRET=XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 ```
 한가지 추가로 설정해 주어야 할 것은 아래 그림과 같이 App > Settings > Advanced 탭으로 이동하여 4번 위치의 `Valid OAuth redirect URIs` 값을 우선 `http://localhost:3000`로 입력하고 5번에서 `변경내용저장`을 클릭하여 작업을 완료한다. 이것은 `Facebook`을 호출한 후 콜백할 웹어플리케이션의 주소를 입력해 주는 것이다.
 
-![](http://i1373.photobucket.com/albums/ag392/rorlab/Photobucket%20Desktop%20-%20RORLAB/exploring_devise/2014-06-01_16-23-38_zpsf8d38f5f.png)
+![](/assets/2014-06-01_16-23-38_zpsf8d38f5f.png)
 
 > **Note** 허로쿠로 배포할 경우에는 4번에 허로쿠 주소도 함께 등록해 주어야 한다.
 
@@ -223,19 +223,19 @@ end
 <% end %>
 ```
 
-![](http://i1373.photobucket.com/albums/ag392/rorlab/Photobucket%20Desktop%20-%20RORLAB/exploring_devise/2014-06-01_23-38-42_zpsdcbcb2e5.png)
+![](/assets/2014-06-01_23-38-42_zpsdcbcb2e5.png)
 
 이제 `로그인` 버튼 아래에 있는 `페이스북으로 로그인` 링크나 우측 상단의 `Sign in` 메뉴의 `with Facebook` 항목을 클릭하면 아래와 같은 화면이 보이고,
 
-![](http://i1373.photobucket.com/albums/ag392/rorlab/Photobucket%20Desktop%20-%20RORLAB/exploring_devise/2014-06-01_17-12-44_zpsdfc86392.png)
+![](/assets/2014-06-01_17-12-44_zpsdfc86392.png)
 
 이 웹어플리케이션에서 본인의 페이스북 계정으로 최초로 로그인할 때 단 한번만 아래와 같은 확인 메시지를 볼 수 있다.
 
-![](http://i1373.photobucket.com/albums/ag392/rorlab/Photobucket%20Desktop%20-%20RORLAB/exploring_devise/2014-06-01_16-20-36_zpsa258622f.png)
+![](/assets/2014-06-01_16-20-36_zpsa258622f.png)
 
 로그인이 완료된 후의 화면은 아래와 같다.
 
-![](http://i1373.photobucket.com/albums/ag392/rorlab/Photobucket%20Desktop%20-%20RORLAB/exploring_devise/2014-06-02_01-35-56_zpsa31d0904.png)
+![](/assets/2014-06-02_01-35-56_zpsa31d0904.png)
 
 1번은 로그인한 사용자의 페이스북 사용자명, 2번은 페이스북으로 인증이 성공적으로 처리됨을 알리는 `flash` 메시지, 3번은 로그아웃을 할 수 있는 링크를 말한다.
 
